@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "Serk",
+  "MongoUri": "mongodb+srv://Serk:1111qwer@cluster0.211s1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
