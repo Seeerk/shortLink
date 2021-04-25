@@ -16,7 +16,7 @@ export const CreatePage = () => {
     const pressHandler = async event => {
         if (event.key === 'Enter') {
             try {
-                const data = await request('/api/link/generate', 'POST', {from: link}, {
+                const data = await request('/api/link/generate/', 'POST', {from: link}, {
                     Authorization: `Bearer ${auth.token}`
                 })
                 history.push(`/detail/${data.link._id}`)
@@ -28,7 +28,7 @@ export const CreatePage = () => {
         <div>
             <h1>Create Page</h1>
             <div className="row">
-                <div className="col s8 offset-s2" style={{paddingTop: '2rem'}}>
+                <div className="col s6" style={{paddingTop: '2rem'}}>
                     <div className="input-field">
                         <input
                             placeholder="Paste your link"

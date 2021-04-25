@@ -7,15 +7,15 @@ export const LinksList = ({ links }) => {
     }
 
     return (
-        <table>
-            <thead>
-            <tr>
-                <th>№</th>
-                <th>Link</th>
-                <th>ShortLink</th>
-                <th>Open</th>
-            </tr>
-            </thead>
+        <table className="responsive-table">
+            {/*<thead>*/}
+            {/*<tr>*/}
+            {/*    <th>№</th>*/}
+            {/*    <th>Link</th>*/}
+            {/*    <th>ShortLink</th>*/}
+            {/*    <th>Open</th>*/}
+            {/*</tr>*/}
+            {/*</thead>*/}
 
             <tbody>
             { links.map((link, index) => {
@@ -35,3 +35,5 @@ export const LinksList = ({ links }) => {
 
     )
 }
+
+// {"_id":{"$oid":"607eddf66cfd0135fc629bb5"},"clicks":{"$numberInt":"0"},"code":"SLLaJaOD8","from":"https://materializecss.com/navbar.html","to":"http://localhost:5000/t/SLLaJaOD8","owner":{"$oid":"607e894ebee6b32d26f40f41"},"date":{"$date":{"$numberLong":"1618927094248"}},"__v":{"$numberInt":"0"}}

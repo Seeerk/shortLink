@@ -17,7 +17,7 @@ export const DetailPage = () => {
                 Authorization: `Bearer ${token}`
             })
             setLink(fetched)
-            console.log(fetched)
+            console.log('blah');
         } catch (e) {
             console.log("Durak?")
         }
@@ -35,7 +35,6 @@ export const DetailPage = () => {
     return (
 
                 <div>
-                <h1>Detail Page</h1>
                 <>
                     { !loading && link && <LinkCard link={link} /> }
                 </>
