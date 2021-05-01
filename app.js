@@ -22,13 +22,15 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = config.get('port') || 5000;
 
 async function start() {
+    // let server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+    // let server_host = process.env.YOUR_HOST || '0.0.0.0';
     try{
         await mongoose.connect(config.get('MongoUri'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         })
-        app.listen(PORT, () => console.log(`App has been started on port ${PORT}`))
+        app.listen(PORT, '0.0.0.0', () => console.log(`App has been started on port ${PORT}`))
     } catch (e) {
         console.log('Server error', e.message)
         process.exit(1)
